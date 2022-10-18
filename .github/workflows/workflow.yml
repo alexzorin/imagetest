@@ -28,7 +28,7 @@ jobs:
         
       - name: Install haveged
         run: |
-          apt -y install haveged
+          sudo apt -y install haveged
           sleep 5
 
       - name: Check entropy again
