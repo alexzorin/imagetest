@@ -25,3 +25,12 @@ jobs:
         
       - name: Check entropy
         run: cat /proc/sys/kernel/random/entropy_avail
+        
+      - name: Install haveged
+        run: |
+          apt -y install haveged
+          sleep 5
+
+      - name: Check entropy again
+        run: cat /proc/sys/kernel/random/entropy_avail
+
