@@ -23,15 +23,6 @@ jobs:
       - name: Check docker compose v2 version
         run: docker compose version
         
-      - name: Check entropy
-        run: cat /proc/sys/kernel/random/entropy_avail
-        
-      - name: Install haveged
-        run: |
-          sudo apt-get -y install haveged
-          sudo systemctl enable --now haveged
-          sleep 5
-
-      - name: Check entropy again
-        run: cat /proc/sys/kernel/random/entropy_avail
-
+      - name: Check docker compose v2 direct plugin version
+        run: /usr/local/lib/docker/cli-plugins/docker-compose version
+      
