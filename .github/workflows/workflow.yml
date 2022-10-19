@@ -23,6 +23,6 @@ jobs:
       - name: Check docker compose v2 version
         run: docker compose version
         
-      - name: Check docker compose v2 direct plugin version
-        run: /usr/local/lib/docker/cli-plugins/docker-compose version
+      - name: find docker-compose
+        run: find / -type f -name docker-compose
       
